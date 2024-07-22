@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@font-face {
+  font-family: 'RvD_BETON13';
+  font-style: normal;
+  font-weight: normal;
+  src: local('RvD_BETON13'), url('RvD_BETON13.woff') format('woff');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Michroma", sans-serif;
+  background-image: linear-gradient(120deg, #798dbb 0%, #f68084 100%);
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 700;
+  font-family: "Michroma", sans-serif;
+}
+
+.container {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column; /* Centering vertically */
+}
+
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to top, #3a6186 0%, #89253e 100%);
+  height: 110%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+}
+
+#svg {
+  height: 150px;
+  width: 150px;
+  stroke: white;
+  fill-opacity: 0;
+  stroke-width: 3px;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.name-container {
+  height: 30px;
+  overflow: hidden;
+}
+
+.logo-name {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+
+.high-score {
+  margin-top: 15px;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  margin: 15px 0 55px 0;
+  color: #ffffff;
+  z-index: 342342;
+}
+
+.container {
+  display: flex; /* Change to flexbox for better centering */
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.btn {
+  margin: 12px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  cursor: pointer;
+  outline-offset: 4px;
+  transform: translateY(-6px);
+  transition: 0.1s ease-in-out;
+  box-shadow: 3px 10px 6px rgba(20, 20, 20, 0.4);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(90, 89, 89, 0.1);
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: #ff7878;
+  background-image: linear-gradient(315deg, #ff7878 0%, #ff0000 74%);
+  border-top-right-radius: 200px;
+}
+
+.green {
+  background-color: #1b8b00;
+  background-image: linear-gradient(314deg, #1b8b00 0%, #a2d240 74%);
+  border-top-left-radius: 200px;
+}
+
+.blue {
+  background-color: #182b3a;
+  background-image: linear-gradient(315deg, #182b3a 0%, #20a4f3 74%);
+  border-bottom-right-radius: 200px;
+}
+
+.yellow {
+  background-color: #eaf818;
+  background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+  border-bottom-left-radius: 200px;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.blur {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
+#game-over-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  color: white;
+  z-index: 9999;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* styles here will only apply to screens between 600px and 1024px wide */
+  .container {
+    margin-top: 27%;
+  }
+  .btn {
+    height: 300px;
+    width: 300px;
+    border: 3px solid black;
+  }
+
+  #level-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 300px;
+  }
+  .btn {
+    height: 250px;
+    width: 250px;
+    border: 3px solid black;
+  }
+
+  #level-title {
+    font-size: 3rem;
+  }
+}

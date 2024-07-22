@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="game">
+    <h1 id="level-title" style="font-size: 50px; padding-top: 10px;color: black;">Press a Key to Start</h1>
+    <span style=" font-family: 'Press Start 2P', cursive; font-size: 30px;">HighScore:<h2>0</h2></span>
+    <div class="container">
+      <div class="high-score">
+       
+      </div>
+      <div class="btns row">
+        <div type="button" id="green" class="btn green">
+        </div>
+        <div type="button" id="red" class="btn red">
+        </div>
+      </div>
+      <div class="row">
+        <div type="button" id="yellow" class="btn yellow">
+        </div>
+        <div type="button" id="blue" class="btn blue">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loading-page">
+    <h3 >Simon- Memory Challenge </h3>
+      <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 552"> 
+        <path d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"/>
+      </svg>
+      <div class="name-container">
+          <div class="logo-name">Created by- Krish</div>
+      </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+  integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js" ></script>
+</body>
+
+</html>
